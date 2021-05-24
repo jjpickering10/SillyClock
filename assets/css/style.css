@@ -4,13 +4,16 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  /* height: 100vh; */
   margin: 0;
   padding: 0;
 }
 
 .container {
-  background: rgba(120, 72, 24, 0.85);
+  background: radial-gradient(
+    rgba(120, 72, 24, 0.85) 25%,
+    rgba(120, 72, 24, 0.95)
+  );
   width: 250px;
   display: flex;
   flex-direction: column;
@@ -22,6 +25,9 @@ body {
   border-bottom-left-radius: 100px;
   /* box-shadow: -20px 0px 15px 0px rgba(0, 0, 0, 0.8); */
   box-shadow: -20px 0px 15px 0px rgba(12, 12, 12, 0.5);
+  /* height: 65%; */
+  padding: 20px 0px 40px 0px;
+  margin: 12.5vh;
 }
 
 .circle {
@@ -33,16 +39,18 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: -5px 0px 15px 0px rgba(0, 0, 0, 1);
+  box-shadow: -15px 0px 20px 5px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(120, 72, 24, 0.5);
 }
 
 .hand {
   position: absolute;
   height: 5px;
   width: 50%;
-  top: 50%;
+  /* top: 50%; */
   left: 0;
   background: black;
+  border-radius: 25%;
 }
 
 .outer-circle {
@@ -53,8 +61,9 @@ body {
   align-content: center;
   height: 175px;
   width: 175px;
-  margin: 20px;
+  margin: 20px 20px -10px 20px;
   border-radius: 50%;
+  /* box-shadow: -15px 0px 20px 5px rgba(0, 0, 0, 0.7); */
   /* border: 1px solid black; */
 }
 
@@ -63,7 +72,9 @@ body {
   height: 10px;
   width: 10px;
   border-radius: 50%;
-  background: red;
+  background: rgba(255, 255, 255, 0.4);
+  box-shadow: inset 0px 0px 4px 0px rgba(0, 0, 0, 1),
+    0px 0px 0px 0px rgba(0, 0, 0, 1);
 }
 
 .circle-dot1 {
@@ -116,7 +127,7 @@ body {
   height: 65%;
   width: 65%;
   border-radius: 50%;
-  border: 2px solid rgba(112, 62, 19, 1);
+  /* border: 10px solid rgba(120, 72, 24, 0.5); */
   box-shadow: -5px 0px 15px 0px rgba(0, 0, 0, 1);
 }
 .inner-circle2 {
@@ -126,4 +137,35 @@ body {
   border-radius: 50%;
   border: 2px solid rgba(112, 62, 19, 1);
   box-shadow: -5px 0px 15px 0px rgba(0, 0, 0, 1);
+}
+
+.circle-center-minutes,
+.circle-center-hours {
+  background: rgba(193, 147, 101, 0.85);
+  box-shadow: inset 0px 0px 2px 2px rgba(0, 0, 0, 1);
+  z-index: 1000;
+  /* box-shadow: none; */
+}
+
+.circle-center-seconds {
+  background: darkred;
+  z-index: 1000;
+  box-shadow: none;
+}
+
+.minutes-hand {
+  left: 2%;
+  width: 48%;
+}
+
+.hours-hand {
+  left: 10%;
+  width: 40%;
+}
+
+.seconds-hand {
+  left: 2%;
+  width: 48%;
+  background: darkred;
+  height: 1.5px;
 }
