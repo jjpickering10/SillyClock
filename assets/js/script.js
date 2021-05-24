@@ -7,24 +7,21 @@ function setSecondsDate() {
   const seconds = time.getSeconds();
   const secondsRotate = (seconds / 60) * 360 + 90;
   secondsHand.style.transform = `rotate(${secondsRotate}deg)`;
-  //   console.log(secondsRotate);
 }
 function setMinutesDate() {
   const time = new Date();
   const minutes = time.getMinutes();
   const minutesRotate = (minutes / 60) * 360 + 90;
   minutesHand.style.transform = `rotate(${minutesRotate}deg)`;
-  //   console.log(minutesRotate);
+  console.log(minutesRotate);
 }
 function setHoursDate() {
   const time = new Date();
   const hours = time.getHours();
-  const seconds = time.getSeconds();
   const minutes = time.getMinutes();
   const hoursRotate = ((hours + minutes / 60) / 12) * 360 + 90;
   hoursHand.style.transform = `rotate(${hoursRotate}deg)`;
   console.log(hoursRotate);
-  console.log(hours);
 }
 
 setInterval(setSecondsDate, 1000);
