@@ -51,6 +51,9 @@ body {
   left: 0;
   background: black;
   border-radius: 25%;
+  transform-origin: 100%;
+  transform: rotate(90deg);
+  transition: all 0.5s;
 }
 
 .outer-circle {
