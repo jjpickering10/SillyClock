@@ -21,11 +21,9 @@ function setHoursDate() {
   const hours = time.getHours();
   const hoursRotate = (hours / 60) * 360 + 90;
   hoursHand.style.transform = `rotate(${hoursRotate}deg)`;
-  console.log(hours);
+  //   console.log(hours);
 }
 
 setInterval(setSecondsDate, 1000);
 setInterval(setMinutesDate, 1000);
 setInterval(setHoursDate, 1000);
-
-console.log();
